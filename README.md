@@ -5,17 +5,17 @@ import numpy as np
 import scipy
 from scipy import stats
 
-#Please write below the name of the statistical distributions that you would like to fit.
-#Full list is here: https://docs.scipy.org/doc/scipy/reference/stats.html
+# Please write below the name of the statistical distributions that you would like to fit.
+# Full list is here: https://docs.scipy.org/doc/scipy/reference/stats.html
 dist_names = ['weibull_min','norm','weibull_max','beta',
               'invgauss','uniform','gamma','expon',   
               'lognorm','pearson3','triang']
 
-#Read your data and set y_std to the column that you want to fit.
+# Read your data and set y_std to the column that you want to fit.
 y_std=pd.read_csv('20201126_dwell_for_abnormal_trucks_updated.csv')
 y_std=y_std['sec_dwell']
 
-#-------------------------------------------------
+# -------------------------------------------------
 chi_square_statistics = []
 size=len(y_std)
 
@@ -47,7 +47,7 @@ for distribution in dist_names:
     chi_square_statistics.append(ss)
 
 
-#Sort by minimum ch-square statistics
+# Sort by minimum ch-square statistics
 results = pd.DataFrame()
 results['Distribution'] = dist_names
 results['chi_square'] = chi_square_statistics
