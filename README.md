@@ -1,4 +1,6 @@
 # distribution_fit
+
+```
 This code finds the 'best' fitting distribution for any given data, based on the Chi-Square statistics.
 import pandas as pd
 import numpy as np
@@ -56,3 +58,5 @@ results.sort_values(['chi_square'], inplace=True)
 print ('\nDistributions listed by betterment of fit:')
 print ('............................................')
 print (results)
+
+```
