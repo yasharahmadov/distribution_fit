@@ -14,8 +14,8 @@ dist_names = ['weibull_min','norm','weibull_max','beta',
               'lognorm','pearson3','triang']
 
 ## Read your data and set y_std to the column that you want to fit.
-y_std=pd.read_csv('20201126_dwell_for_abnormal_trucks_updated.csv')
-y_std=y_std['sec_dwell']
+y_std=pd.read_csv('df.csv')
+y_std=y_std['column_name']
 
 chi_square_statistics = []
 size=len(y_std)
